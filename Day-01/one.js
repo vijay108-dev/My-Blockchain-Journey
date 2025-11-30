@@ -3,7 +3,6 @@ const crypto = require('crypto');
 function sha256(data) {
   return crypto.createHash('sha256').update(data).digest('hex');
 }
-
 function mineBlock(data, difficultyPrefix = '0000') {
   let nonce = 0;
   let hash = '';
